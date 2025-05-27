@@ -30,25 +30,6 @@ while True:
     token_count = response.usage.total_tokens
 
     print("Assistant:", assistant_reply, ("Token count:", token_count))
-    # print("Token count:", token_count)
 
     messages.append({"role": "assistant", "content": assistant_reply})
 
-
-#######################      for one time response: 
-
-# user_input = input("Ask something: ")
-
-# response = client.chat.completions.create(
-#     model="gpt-3.5-turbo",
-#     messages=[
-#         {"role": "system", "content": "You are a helpful assistant."},
-#         {"role": "user", "content": user_input}
-#     ],
-#     temperature=1,
-#     max_tokens=100
-# )
-# answer = response.choices[0].message.content
-# print("Assistant: ", answer)
-
-# print("Total tokens used: ", response.usage.total_tokens)
